@@ -1,0 +1,33 @@
+class CustomGallery extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <style>
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 1rem;
+        }
+      </style>
+      <section id="galerija" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-primary mb-16">Galerija radova</h2>
+          
+          <div class="gallery-grid">
+            <div class="gallery-item cursor-pointer">
+              <img src="http://static.photos/art/640x360/1" alt="Restaurirana slika" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div class="gallery-item cursor-pointer">
+              <img src="http://static.photos/art/640x360/2" alt="Restaurirana skulptura" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div class="gallery-item cursor-pointer">
+              <img src="http://static.photos/art/640x360/3" alt="Konzervatorski radovi" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div class="gallery-item cursor-pointer">
+              <img src="http://static.photos/art/640x360/4" alt="Restauriranje okvira" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div class="gallery-item cursor-pointer">
+              <img src="http://static.photos/art/640x360/5" alt="Restaurirana keramika" class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div class="gallery-item cursor-pointer">
+              <img src="http://static.photos/art/640x360/6" alt="Restaurirani metalni predmet" class="w-full h-

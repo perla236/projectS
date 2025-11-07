@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>STASIOW</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      style="
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: fadeDown 0.3s ease-out forwards;
+        animation-delay: 0.3s;
+      "
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">STASIOW</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Početna</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Usluge</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projekti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="naslov-stasiow">STASIOW</h1>
+        <container class="cardd">
+          <container class="loader">
+            <div><p>Obrt za restauraciju</p></div>
+            <br />
+            <div class="words">
+              <span class="word">skulptura</span>
+              <span class="word">predmeta</span>
+              <span class="word">objekata</span>
+              <span class="word">slika</span>
+              <span class="word">umjetnina</span>
+            </div>
+          </container>
+        </container>
+      </div>
+      <div class="centriraj">
+        <a>Saznajte više</a>
+        <div class="main__action">
+          <a class="main__scroll" href="#">
+            <div class="main__scroll-box">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M11.9997 13.1716L7.04996     8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z"
+                  fill="rgba(28,28,30,1)"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="row custom-row">
+      <div
+        class="col-12 col-md-3 custom-square black-bg"
+        style="
+          opacity: 0;
+          transform: translateY(-50px);
+          animation: fadeDown 0.6s ease-out forwards;
+          animation-delay: 0.3s;
+        "
+      >
+        <div class="content-wrapper">
+          <img class="icon-img" src="img/icon1.png" alt="Usluga 1" />
+          <p class="title">Naziv Usluge 1</p>
+          <p class="description">
+            Ovdje ide kratki opis prve usluge ili značajke.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-md-3 custom-square darker-gray-bg"
+        style="
+          opacity: 0;
+          transform: translateY(-50px);
+          animation: fadeDown 0.6s ease-out forwards;
+          animation-delay: 0.4s;
+        "
+      >
+        <div class="content-wrapper">
+          <img class="icon-img" src="img/icon2.png" alt="Usluga 2" />
+          <p class="title">Naziv Usluge 2</p>
+          <p class="description">
+            Ovo je opis za drugu stavku, malo svjetlije pozadine.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-md-3 custom-square light-gray-bg"
+        style="
+          opacity: 0;
+          transform: translateY(-50px);
+          animation: fadeDown 0.6s ease-out forwards;
+          animation-delay: 0.5s;
+        "
+      >
+        <div class="content-wrapper">
+          <img class="icon-img" src="img/icon3.png" alt="Usluga 3" />
+          <p class="title">Naziv Usluge 3</p>
+          <p class="description">
+            Treći element s još svjetlijom bojom pozadine za vizualni prijelaz.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="col-12 col-md-3 custom-square lightest-gray-bg"
+        style="
+          opacity: 0;
+          transform: translateY(-50px);
+          animation: fadeDown 0.6s ease-out forwards;
+          animation-delay: 0.6s;
+        "
+      >
+        <div class="content-wrapper">
+          <img class="icon-img" src="img/icon4.png" alt="Usluga 4" />
+          <p class="title">Naziv Usluge 4</p>
+          <p class="description">
+            Posljednji kvadrat, najsvjetliji od svih, za potpunu vizualnu
+            gradaciju.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

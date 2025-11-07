@@ -1,0 +1,23 @@
+class CustomHero extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <style>
+        .hero-section {
+          min-height: 80vh;
+        }
+      </style>
+      <section class="hero-section flex items-center justify-center text-white pt-20">
+        <div class="container mx-auto px-6 text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">STASIOW</h1>
+          <p class="text-xl md:text-2xl mb-8">Restauriranje i konzervacija umjetničkih djela</p>
+          <a href="#kontakt" class="bg-secondary hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-flex items-center">
+            Kontaktirajte nas
+            <i data-feather="arrow-right" class="ml-2"></i>
+          </a>
+        </div>
+      </section>
+    `;
+  }
+}
+customElements.define('custom-hero', CustomHero);

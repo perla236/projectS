@@ -1,0 +1,100 @@
+class CustomServices extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <style>
+        .service-icon {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          color: var(--primary);
+        }
+      </style>
+      <section id="usluge" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-primary mb-16">Naše usluge</h2>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Istraživački i Konzervatorski radovi -->
+            <div class="service-card bg-white p-8 rounded-lg shadow-md text-center">
+              <div class="service-icon">
+                <i data-feather="search"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Istraživački i Konzervatorski radovi</h3>
+              <ul class="text-gray-700 text-left space-y-2">
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Procjena i dijagnostika stanja</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Izrada dokumentacije</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Istražni radovi na umjetninama</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Preventivna konzervacija</span>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Restauratorski zahvati po materijalu -->
+            <div class="service-card bg-white p-8 rounded-lg shadow-md text-center">
+              <div class="service-icon">
+                <i data-feather="brush"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Restauratorski zahvati po materijalu</h3>
+              <ul class="text-gray-700 text-left space-y-2">
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Restauracija štafelajnih slika</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Restauracija drvene polikromirane plastike</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Restauracija keramike i stakla</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Restauracija metalnih i kamenih predmeta</span>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Dodatne usluge -->
+            <div class="service-card bg-white p-8 rounded-lg shadow-md text-center">
+              <div class="service-icon">
+                <i data-feather="plus-circle"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-4">Dodatne usluge</h3>
+              <ul class="text-gray-700 text-left space-y-2">
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Izrada replika i kopija</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Izrada postolja i vitrina</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Konzultacije i mentorstvo</span>
+                </li>
+                <li class="flex items-start">
+                  <i data-feather="check" class="mr-2 text-secondary"></i>
+                  <span>Montaža i demontaža umjetnina</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+}
+customElements.define('custom-services', CustomServices);

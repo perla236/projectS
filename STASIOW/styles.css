@@ -1,0 +1,495 @@
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideFromLeft {
+  opacity: 0;
+  animation: slideFromLeft 0.8s forwards;
+}
+
+.animate-slideFromRight {
+  opacity: 0;
+  animation: slideFromRight 0.8s forwards;
+}
+@keyframes spark {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px 10px rgba(220, 38, 38, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+/* Animation classes */
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 1s ease forwards;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 1s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+/*dalje moje */
+
+.naslov-stasiow {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeDown 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+  padding: 4rem 2rem;
+  z-index: 2;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #aaa897;
+  min-height: 50vh;
+
+  /* 1. Odredite sliku */
+  /* background-image: url("https://images.pexels.com/photos/10666234/pexels-photo-10666234.jpeg");*/
+
+  /* 2. Osigurajte da slika uvijek prekriva cijelu sekciju */
+  background-size: cover;
+
+  /* 3. Centrirajte sliku unutar sekcije */
+  background-position: center center;
+
+  /* 4. Osigurajte da se slika ne ponavlja */
+  background-repeat: no-repeat;
+
+  /* 5. (Opcionalno) Fiksirajte sliku pri skrolanju (Parallax efekt) */
+  /* background-attachment: fixed; */
+
+  /* 6. Osigurajte da sekcija ima visinu da bi se slika vidjela. 
+       Koristili smo 100vh za cijeli ekran: */
+  height: 100%;
+  z-index: 2;
+
+  /* Dodajte dimere za bolju vidljivost teksta (opcionalno) */
+  /* Maska preko slike se radi pomoću pseudo-elementa, ali ovo su osnove */
+}
+
+.hero::before {
+  content: ""; /* Obavezno za pseudo-elemente */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Postavljanje boje i prozirnosti */
+  /* Primjer: Crna boja (0, 0, 0) s 30% prozirnosti (0.3) */
+  /* background-color: rgba(255, 255, 255, 0.651);*/
+
+  /* Z-INDEX: Postavite ga iznad pozadine (1), ali ispod teksta (2) */
+  z-index: 1;
+}
+
+.cardd {
+  --bg-color: #ffffff00;
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+.loader {
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #608f5b;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+.centriraj {
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeDown 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+/* From Uiverse.io by ArturCodeCraft */
+/* <reset-style> ============================ */
+a {
+  text-decoration: none;
+}
+/* <main-style> ============================ */
+.main__scroll-text {
+  color: rgba(28, 28, 30, 1);
+}
+
+.main__action:hover .main__scroll-box {
+  animation: scroll-down 3s infinite;
+}
+.main__action {
+  overflow: hidden;
+}
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+  0%,
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
+
+/* Primijeniti sljedeće stilove SAMO kada je širina ekrana 768px ili manja */
+@media (max-width: 768px) {
+}
+
+/* Prilagođeni stilovi za Bootstrap linkove u desktop prikazu */
+/* Zamjenjuje .nav-links stilove */
+
+/* Stilovi za svaki link (nav-link) */
+/* Zamjenjuje .nav-links a stilove */
+.nav-link {
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding-left: 0.5rem !important; /* Poništava Bootstrap paddinge koji se preklapaju s gap-om */
+}
+
+/* Animacija podcrtavanja (underline animation) */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Malo ispod teksta, prilagodite po potrebi */
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #35393d;
+  transition: width 0.3s ease;
+}
+
+/* Efekt prelaska mišem i aktivnog linka (hover/active effect) */
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #6c757d !important; /* Promjena boje teksta pri prelasku mišem */
+}
+
+/* Dodatni stil za boju 'active' linka */
+.nav-link.active {
+  color: #101113 !important; /* Boja aktivnog linka */
+}
+
+/* Onemogućeni link (disabled link) - Bootstrap stilovi su obično dovoljni, ali evo ga za svaki slučaj */
+.nav-link.disabled {
+  pointer-events: none; /* Sprečava klikanje */
+  color: #6c757d !important; /* Siva boja za onemogućene */
+}
+
+/* Mobilni gumb - Bootstrap ga već koristi, ne treba nam .menu-toggle */
+/* Bootstrap koristi .navbar-toggler, pa ga ne trebamo dirati ako želimo zadržati zadani izgled */
+
+/* ----- Glavni kontejner - POPRAVAK ŠIRINE ----- */
+.custom-row {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0; /* Poništava defaultni Bootstrap margin */
+  margin-right: 0; /* Poništava defaultni Bootstrap margin */
+}
+
+/* ----- Stilizacija svakog kvadrata (Stupca) ----- */
+.custom-square {
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* ----- Definiranje boja (Prijelaz od crne do svijetle) ----- */
+.black-bg {
+  background-color: #1a1a1a;
+}
+
+.darker-gray-bg {
+  background-color: #4a4a4a;
+}
+
+.light-gray-bg {
+  background-color: #7a7a7a;
+}
+
+.lightest-gray-bg {
+  background-color: #a0a0a0;
+  color: #1a1a1a; /* Tekst u najsvjetlijem kvadratu neka bude taman */
+}
+
+/* ----- Stilizacija Sadržaja unutar kvadrata ----- */
+.content-wrapper {
+  text-align: center;
+  max-width: 100%; /* Ispravak za bolje uklapanje */
+}
+
+/* ----- NOVO: Stil za PNG ikone ----- */
+.icon-img {
+  width: 60px; /* Prilagodi veličinu PNG slike */
+  height: 60px; /* Održava kvadratni oblik, ali pripazi na omjer slike */
+  object-fit: contain; /* Osigurava da se cijela slika vidi unutar zadane dimenzije */
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ----- Mobilni prikaz (Override Bootstrap Grid) ----- */
+@media (max-width: 767.98px) {
+  .col-12 {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .lightest-gray-bg {
+    color: #1a1a1a !important;
+  }
+}

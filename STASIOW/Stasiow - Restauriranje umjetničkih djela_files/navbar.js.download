@@ -1,0 +1,54 @@
+class CustomNavbar extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <style>
+        .nav-link {
+          position: relative;
+        }
+        .nav-link:after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--secondary);
+          transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+          width: 100%;
+        }
+      </style>
+      <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3">
+          <div class="flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-primary flex items-center">
+              <i data-feather="feather" class="mr-2"></i>
+              STASIOW
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+              <a href="#o-nama" class="nav-link text-gray-700 hover:text-primary">O nama</a>
+              <a href="#usluge" class="nav-link text-gray-700 hover:text-primary">Usluge</a>
+              <a href="#galerija" class="nav-link text-gray-700 hover:text-primary">Galerija</a>
+              <a href="#kontakt" class="nav-link text-gray-700 hover:text-primary">Kontakt</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+              <i data-feather="menu" class="text-gray-700"></i>
+            </button>
+          </div>
+          
+          <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#o-nama" class="block py-2 text-gray-700 hover:text-primary">O nama</a>
+            <a href="#usluge" class="block py-2 text-gray-700 hover:text-primary">Usluge</a>
+            <a href="#galerija" class="block py-2 text-gray-700 hover:text-primary">Galerija</a>
+            <a href="#kontakt" class="block py-2 text-gray-700 hover:text-primary">Kontakt</a>
+          </div>
+        </div>
+      </nav>
+    `;
+  }
+}
+customElements.define('custom-navbar', CustomNavbar);
