@@ -16,15 +16,19 @@ Sustav radi u 4 koraka:
 * Python 3.x instaliran na računalu.
 * Google Chrome (ili Chromium) preglednik.
 
-### 2. Instalacija biblioteka u terminalu
-
+### 2. Instalacija biblioteka:
+```
+TERMINAL
 pip install -r requirements.txt
 
+```
 ### 3. Instalacija Playwright preglednika
-Nakon instalacije biblioteka, potrebno je preuzeti upravljačke programe za preglednik (u terminalu):
-
+Nakon instalacije biblioteka, potrebno je preuzeti upravljačke programe za preglednik:
+```
+TERMINAL
 playwright install
 
+```
 ## 🚀 Kako koristiti (Workflow)
 Projekt je zamišljen da se skripte pokreću redom (numerirane su od 1 do 4).
 
